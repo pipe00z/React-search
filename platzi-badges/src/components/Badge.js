@@ -4,6 +4,7 @@ import './styles/Badge.css';
 import confLogo from '../images/logo.svg';
 
 
+
 class Badge extends React.Component {
     render() {
         return (
@@ -13,13 +14,13 @@ class Badge extends React.Component {
                 </div>
 
                 <div className="Badge__section-name">
-                    <img className="Badge__avatar" src="https://www.gravatar.com/avatar/457a95a1b3bfd22fe22b97a86ae742e5" alt="Avatar" />
-                    <h1>Felipe <br /> Zapata</h1>
+                    <img className="Badge__avatar" src={this.props.avatar} alt="Avatar" />
+                    <h1>{this.props.firstName}<br /> {this.props.lastName}</h1>
                 </div>
 
                 <div className="Badge__section-info">
-                    <p>Frontend Developer</p>
-                    <p>pipe@hotmail.com</p>
+                    <p>{this.props.jobTitle}</p>
+                    <p>@{this.props.twitter}</p>
                 </div>
 
                 <div className="Badge__footer">2020</div>
